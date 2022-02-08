@@ -23,5 +23,4 @@ jobs:
 
     - name: Build Image
       id: build-image
-      uses: redhat-actions/buildah-build@v2
       run: echo "${{ steps.vars.outputs.sha_short }}"
