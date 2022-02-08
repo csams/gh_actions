@@ -17,7 +17,7 @@ jobs:
     steps:
     - name: Get the short sha
       id: vars
-      run: echo "::set-output name=sha_short::$(git rev-parse --short ${{ github.sha }})"
+      run: echo "::set-output name=sha_short::$(echo ${{ github.sha }} | cut -b -7)"
 
     - name: Build Image
       id: build-image
